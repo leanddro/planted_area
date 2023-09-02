@@ -2,30 +2,30 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { PlatedAreaService } from '../../core/service/plated-area.service';
+import { PlantedAreaService } from '../../core/service/planted-area.service';
 import { StorageService } from '../../core/service/storage.service';
 import { AppMaterialModule } from '../../shared/app-material/app-material.module';
-import { PlatedAreaRoutingModule } from './plated-area-routing.module';
-import { PlatedAreaComponent } from './plated-area/plated-area.component';
-import { PlatedFormComponent } from './plated-form/plated-form.component';
+import { PlantedAreaRoutingModule } from './planted-area-routing.module';
+import { PlantedAreaComponent } from './planted-area/planted-area.component';
+import { PlantedFormComponent } from './planted-form/planted-form.component';
 
 
 
 
 @NgModule({
   declarations: [
-    PlatedAreaComponent,
-    PlatedFormComponent
+    PlantedAreaComponent,
+    PlantedFormComponent
   ],
   imports: [
     CommonModule,
-    PlatedAreaRoutingModule,
+    PlantedAreaRoutingModule,
     AppMaterialModule,
     ReactiveFormsModule
   ],
   providers: [
-    PlatedAreaService,
+    PlantedAreaService,
     StorageService
   ]
 })
-export class PlatedAreaModule { }
+export class PlantedAreaModule { }

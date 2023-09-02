@@ -1,6 +1,6 @@
 import { Culture } from './culture';
 
-export interface PlatedArea {
+export interface PlantedArea {
   _id: string | undefined
   responsible: string
   culture: Culture

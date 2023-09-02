@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PlatedAreaComponent } from './plated-area.component';
+import { PlantedAreaComponent } from './planted-area.component';
 
 describe('PlatedAreaComponent', () => {
-  let component: PlatedAreaComponent;
-  let fixture: ComponentFixture<PlatedAreaComponent>;
+  let component: PlantedAreaComponent;
+  let fixture: ComponentFixture<PlantedAreaComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PlatedAreaComponent]
+      declarations: [PlantedAreaComponent]
     });
-    fixture = TestBed.createComponent(PlatedAreaComponent);
+    fixture = TestBed.createComponent(PlantedAreaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

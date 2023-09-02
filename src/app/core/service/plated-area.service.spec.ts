@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PlatedAreaService } from './plated-area.service';
+import { PlatedAreaService } from './planted-area.service';
 
 describe('PlatedAreaService', () => {
   let service: PlatedAreaService;

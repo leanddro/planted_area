@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PlatedFormComponent } from './plated-form.component';
+import { PlantedFormComponent } from './planted-form.component';
 
 describe('PlatedFormComponent', () => {
-  let component: PlatedFormComponent;
-  let fixture: ComponentFixture<PlatedFormComponent>;
+  let component: PlantedFormComponent;
+  let fixture: ComponentFixture<PlantedFormComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PlatedFormComponent]
+      declarations: [PlantedFormComponent]
     });
-    fixture = TestBed.createComponent(PlatedFormComponent);
+    fixture = TestBed.createComponent(PlantedFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
