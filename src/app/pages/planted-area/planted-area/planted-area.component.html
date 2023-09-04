@@ -36,5 +36,6 @@
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
     </mat-table>
+    <app-pie [plantedData]="plantedData"></app-pie>
   </mat-card-content>
 </mat-card>

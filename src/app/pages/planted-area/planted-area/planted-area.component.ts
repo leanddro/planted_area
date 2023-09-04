@@ -11,17 +11,18 @@ import { PlantedAreaService } from '../../../core/service/planted-area.service';
   templateUrl: './planted-area.component.html',
   styleUrls: ['./planted-area.component.scss']
 })
-export class PlantedAreaComponent implements OnInit {
+export class PlantedAreaComponent {
 
   platedArea: PlantedArea[] = []
   displayedColumns = ['responsible', 'culture', 'area', 'date', 'actions']
   culture = Culture
 
-  constructor(private service: PlantedAreaService, private router: Router,
-    private route: ActivatedRoute, private snackBar: MatSnackBar) { }
+  public plantedData: { cultures: string[], areas: number[] }
 
-  ngOnInit(): void {
+  constructor(private service: PlantedAreaService, private router: Router,
+    private route: ActivatedRoute, private snackBar: MatSnackBar) {
     this.platedArea = this.service.plantedAreaList
+    this.plantedData = this.createPlantedData()
   }
 
   onAdd() {
@@ -36,5 +37,23 @@ export class PlantedAreaComponent implements OnInit {
     this.service.delete(planted)
     window.location.reload()
     this.snackBar.open('Cadastrado com sucesso!', '', { duration: 10000 })
+  }
+
+  createPlantedData() {
+    const groupedData: { culture: string, area: number }[] = this.platedArea.reduce((acc, curr) => {
+      if (!acc[curr.culture]) {
+        acc[curr.culture] = { culture: curr.culture, area: curr.area }
+      } else {
+        acc[curr.culture].area += curr.area
+      }
+      return acc
+    }, {} as any)
+    let cultures: string[] = []
+    let areas: number[] = []
+    Object.values(groupedData).forEach(data => {
+      cultures.push(data.culture)
+      areas.push(data.area)
+    })
+    return { cultures: cultures, areas: areas }
   }
 }

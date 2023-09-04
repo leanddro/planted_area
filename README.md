@@ -1,27 +1,65 @@
 # PlantedArea
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+<p align="center">
+  <img src="http://img.shields.io/static/v1?label=Ruby&message=3.2.1&color=red&style=for-the-badge&logo=ruby"/>
+  <img src="http://img.shields.io/static/v1?label=Ruby%20On%20Rails%20&message=7.0.4.3&color=red&style=for-the-badge&logo=ruby"/>
+  <img src="http://img.shields.io/static/v1?label=TESTES&message=%3E70&color=GREEN&style=for-the-badge"/>
+  <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge"/>
+</p>
 
-## Development server
+### Tópicos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+:diamond_shape_with_a_dot_inside: [Descrição do projeto](#descrição-do-projeto)
 
-## Code scaffolding
+:diamond_shape_with_a_dot_inside: [Funcionalidades](#funcionalidades)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+:diamond_shape_with_a_dot_inside: [Pré-requisitos](#pré-requisitos)
 
-## Build
+:diamond_shape_with_a_dot_inside: [Como rodar a aplicação](#como-rodar-a-aplicação)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Descrição do projeto
 
-## Running unit tests
+<p align="justify">
+  Um MVP de frontend, onde a funcionalidade e gerenciar as areas plantadas, e mostrar em gráfico.
+</p>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Funcionalidades
 
-## Running end-to-end tests
+:white_check_mark: Cadastro de área plantada
+:white_check_mark: Editação de área plantada
+:white_check_mark: Exclusão de área plantada
+:white_check_mark: Geração de gráfico com base na áreas cadastrada
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Pré-requisitos
 
-## Further help
+:warning: [Node](https://nodejs.org/en/download/)
+:warning: [Angular v16](https://angular.io/guide/setup-local)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Como rodar a aplicação
+
+No terminal, clone o projeto:
+
+```sh
+git clone https://github.com/leanddro/planted_area
+```
+
+Entre na pasta do projeto:
+
+```sh
+cd planted_area
+```
+
+Rodando aplicação
+
+```sh
+ng serve
+```
+
+Acesse a aplicação em seu navegador através do endereço http://localhost:4200.
+
+Dados pré-cadastrado
+| responsável | Cultura | área | data |
+| ----------- | ------- | ----- | ---------- |
+| João | Arroz | 10000 | 10/10/2022 |
+| Maria | Feijão | 7000 | 11/08/2022 |
+| Jose | Milho | 9500 | 10/09/2022 |

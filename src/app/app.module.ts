@@ -17,7 +17,7 @@ registerLocaleData(localePT)
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'pt-br' },],
   bootstrap: [AppComponent]

@@ -8,20 +8,22 @@ import { AppMaterialModule } from '../../shared/app-material/app-material.module
 import { PlantedAreaRoutingModule } from './planted-area-routing.module';
 import { PlantedAreaComponent } from './planted-area/planted-area.component';
 import { PlantedFormComponent } from './planted-form/planted-form.component';
-
-
+import { PieComponent } from './charts/pie/pie.component';
+import { NgApexchartsModule } from "ng-apexcharts";
 
 
 @NgModule({
   declarations: [
     PlantedAreaComponent,
-    PlantedFormComponent
+    PlantedFormComponent,
+    PieComponent
   ],
   imports: [
     CommonModule,
     PlantedAreaRoutingModule,
     AppMaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgApexchartsModule
   ],
   providers: [
     PlantedAreaService,
